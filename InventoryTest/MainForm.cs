@@ -40,6 +40,7 @@ namespace InventoryTest
                 userManagementToolStripMenuItem.Enabled = true;
                 backLogToolStripMenuItem.Enabled = true;
             }
+            //managementToolStripMenuItem.Visible = false;
             //timer1.Enabled = true;
             //label1.ForeColor = Color.Red;
         }
@@ -104,6 +105,18 @@ namespace InventoryTest
         {
             Recycle_Bin recycle = new Recycle_Bin();
             recycle.Show();
+        }
+
+        private void inboundRecycleBinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recycle_Bin recycle = new Recycle_Bin();
+            recycle.Show();
+        }
+
+        private void inboundManagementToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            InboundManagement obm = new InboundManagement(uname, utype);
+            obm.Show();
         }
     }
 }

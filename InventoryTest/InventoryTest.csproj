@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InventoryTest</RootNamespace>
-    <AssemblyName>InventoryTest</AssemblyName>
+    <AssemblyName>InventoryManagementOR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -128,6 +128,12 @@
     </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="ItemContext.cs" />
+    <Compile Include="itemInboudsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>itemInboudsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ItemInbound.cs" />
     <Compile Include="ItemOutbound.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -154,17 +160,35 @@
     <Compile Include="MultiUpdate.Designer.cs">
       <DependentUpon>MultiUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="InboundItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InboundItemAdd.Designer.cs">
+      <DependentUpon>InboundItemAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutboundItemAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OutboundItemAdd.Designer.cs">
       <DependentUpon>OutboundItemAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="InboundManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InboundManagement.Designer.cs">
+      <DependentUpon>InboundManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutboundManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OutboundManagement.Designer.cs">
       <DependentUpon>OutboundManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InboundModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InboundModify.Designer.cs">
+      <DependentUpon>InboundModify.cs</DependentUpon>
     </Compile>
     <Compile Include="OutboundModify.cs">
       <SubType>Form</SubType>
@@ -228,11 +252,20 @@
     <EmbeddedResource Include="MultiUpdate.resx">
       <DependentUpon>MultiUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InboundItemAdd.resx">
+      <DependentUpon>InboundItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OutboundItemAdd.resx">
       <DependentUpon>OutboundItemAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InboundManagement.resx">
+      <DependentUpon>InboundManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OutboundManagement.resx">
       <DependentUpon>OutboundManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InboundModify.resx">
+      <DependentUpon>InboundModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutboundModify.resx">
       <DependentUpon>OutboundModify.cs</DependentUpon>
@@ -282,6 +315,17 @@
     </None>
     <None Include="InventoryManagementDataSet6.xss">
       <DependentUpon>InventoryManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="itemInboudsDataSet.xsc">
+      <DependentUpon>itemInboudsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="itemInboudsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>itemInboudsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="itemInboudsDataSet.xss">
+      <DependentUpon>itemInboudsDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

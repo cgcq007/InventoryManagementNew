@@ -138,14 +138,14 @@
             // inboundManagementToolStripMenuItem1
             // 
             this.inboundManagementToolStripMenuItem1.Name = "inboundManagementToolStripMenuItem1";
-            this.inboundManagementToolStripMenuItem1.Size = new System.Drawing.Size(208, 30);
+            this.inboundManagementToolStripMenuItem1.Size = new System.Drawing.Size(210, 30);
             this.inboundManagementToolStripMenuItem1.Text = "Management";
             this.inboundManagementToolStripMenuItem1.Click += new System.EventHandler(this.inboundManagementToolStripMenuItem1_Click);
             // 
             // inboundRecycleBinToolStripMenuItem
             // 
             this.inboundRecycleBinToolStripMenuItem.Name = "inboundRecycleBinToolStripMenuItem";
-            this.inboundRecycleBinToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
+            this.inboundRecycleBinToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.inboundRecycleBinToolStripMenuItem.Text = "Recycle Bin";
             this.inboundRecycleBinToolStripMenuItem.Click += new System.EventHandler(this.inboundRecycleBinToolStripMenuItem_Click);
             // 
@@ -157,19 +157,18 @@
             this.OutboundManagement.Name = "OutboundManagement";
             this.OutboundManagement.Size = new System.Drawing.Size(112, 28);
             this.OutboundManagement.Text = "Outbound";
-            this.OutboundManagement.Visible = false;
             // 
             // managementToolStripMenuItem1
             // 
             this.managementToolStripMenuItem1.Name = "managementToolStripMenuItem1";
-            this.managementToolStripMenuItem1.Size = new System.Drawing.Size(208, 30);
+            this.managementToolStripMenuItem1.Size = new System.Drawing.Size(210, 30);
             this.managementToolStripMenuItem1.Text = "Management";
             this.managementToolStripMenuItem1.Click += new System.EventHandler(this.managementToolStripMenuItem1_Click);
             // 
             // recycleBinToolStripMenuItem
             // 
             this.recycleBinToolStripMenuItem.Name = "recycleBinToolStripMenuItem";
-            this.recycleBinToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
+            this.recycleBinToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.recycleBinToolStripMenuItem.Text = "Recycle Bin";
             this.recycleBinToolStripMenuItem.Click += new System.EventHandler(this.recycleBinToolStripMenuItem_Click);
             // 

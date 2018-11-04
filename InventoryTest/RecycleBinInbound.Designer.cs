@@ -1,6 +1,6 @@
 ﻿namespace InventoryTest
 {
-    partial class Recycle_Bin
+    partial class RecycleBinInbound
     {
         /// <summary>
         /// Required designer variable.
@@ -232,7 +232,7 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
-            // Recycle_Bin
+            // RecycleBinInbound
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,8 +242,8 @@
             this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Recycle_Bin";
-            this.Text = "Recycle_Bin";
+            this.Name = "RecycleBinInbound";
+            this.Text = "RecycleBinInbound";
             this.Load += new System.EventHandler(this.Recycle_Bin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.fillBy1ToolStrip.ResumeLayout(false);

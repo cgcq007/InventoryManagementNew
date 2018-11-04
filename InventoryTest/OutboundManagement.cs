@@ -74,7 +74,7 @@ namespace InventoryTest
             {
                 isSelected.HeaderText = "Selected";
                 isSelected.Name = "Selected";
-                isSelected.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                isSelected.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
                 isSelected.FlatStyle = FlatStyle.Standard;
                 isSelected.CellTemplate = new DataGridViewCheckBoxCell();
                 isSelected.CellTemplate.Style.BackColor = Color.Beige;

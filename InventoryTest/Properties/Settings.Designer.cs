@@ -37,9 +37,10 @@ namespace InventoryTest.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:qche.database.windows.net,1433;Initial Catalog=InventoryManagemen" +
-            "t_OR;Persist Security Info=False;Integrated Security=False;User ID=qche;Password" +
-            "=Cq_19920208;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:hooray.database.windows.net,1433;Initial Catalog=InventoryManagem" +
+            "ent_OR;Persist Security Info=False;Integrated Security=False;User ID=hooray;Pass" +
+            "word=Hoo4081Ray;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" +
+            "")]
         public string InventoryManagementConnectionString {
             get {
                 return ((string)(this["InventoryManagementConnectionString"]));

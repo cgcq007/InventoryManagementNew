@@ -106,7 +106,6 @@
             this.Qty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Qty.MaxLength = 32;
             this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
             this.Qty.Size = new System.Drawing.Size(337, 28);
             this.Qty.TabIndex = 38;
             // 

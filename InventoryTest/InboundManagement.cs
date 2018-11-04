@@ -74,7 +74,8 @@ namespace InventoryTest
             {
                 isSelected.HeaderText = "Selected";
                 isSelected.Name = "Selected";
-                isSelected.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                //isSelected.Width = 80;
+                isSelected.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
                 isSelected.FlatStyle = FlatStyle.Standard;
                 isSelected.CellTemplate = new DataGridViewCheckBoxCell();
                 isSelected.CellTemplate.Style.BackColor = Color.Beige;
@@ -437,7 +438,7 @@ namespace InventoryTest
                     ReLoadData();
                 }
                 st.returnCurrentInboundRow(idxUpdate, dataGridView1);
-            } catch (Exception ex) {
+            } catch (Exception ) {
                 MessageBox.Show("Please select the item to modify.");
             }
         }

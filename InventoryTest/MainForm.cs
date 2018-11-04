@@ -103,13 +103,13 @@ namespace InventoryTest
 
         private void recycleBinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Recycle_Bin recycle = new Recycle_Bin();
+            RecycleBinOutbound recycle = new RecycleBinOutbound();
             recycle.Show();
         }
 
         private void inboundRecycleBinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Recycle_Bin recycle = new Recycle_Bin();
+            RecycleBinInbound recycle = new RecycleBinInbound();
             recycle.Show();
         }
 

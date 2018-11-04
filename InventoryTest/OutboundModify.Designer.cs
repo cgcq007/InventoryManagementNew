@@ -45,20 +45,20 @@
             // TrackingNumLabel
             // 
             this.TrackingNumLabel.AutoSize = true;
-            this.TrackingNumLabel.Location = new System.Drawing.Point(14, 85);
+            this.TrackingNumLabel.Location = new System.Drawing.Point(16, 106);
             this.TrackingNumLabel.Name = "TrackingNumLabel";
-            this.TrackingNumLabel.Size = new System.Drawing.Size(92, 17);
+            this.TrackingNumLabel.Size = new System.Drawing.Size(102, 20);
             this.TrackingNumLabel.TabIndex = 46;
             this.TrackingNumLabel.Text = "TrackingNum";
             // 
             // TrackingNum
             // 
             this.TrackingNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrackingNum.Location = new System.Drawing.Point(119, 78);
+            this.TrackingNum.Location = new System.Drawing.Point(134, 98);
             this.TrackingNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TrackingNum.MaxLength = 255;
             this.TrackingNum.Name = "TrackingNum";
-            this.TrackingNum.Size = new System.Drawing.Size(300, 24);
+            this.TrackingNum.Size = new System.Drawing.Size(337, 28);
             this.TrackingNum.TabIndex = 36;
             // 
             // label5
@@ -66,9 +66,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(73, 215);
+            this.label5.Location = new System.Drawing.Point(82, 269);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 18);
+            this.label5.Size = new System.Drawing.Size(35, 22);
             this.label5.TabIndex = 45;
             this.label5.Text = "SN";
             // 
@@ -76,13 +76,13 @@
             // 
             this.SN.AcceptsReturn = true;
             this.SN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SN.Location = new System.Drawing.Point(118, 212);
+            this.SN.Location = new System.Drawing.Point(133, 265);
             this.SN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SN.MaxLength = 30000;
             this.SN.Multiline = true;
             this.SN.Name = "SN";
             this.SN.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.SN.Size = new System.Drawing.Size(300, 106);
+            this.SN.Size = new System.Drawing.Size(337, 132);
             this.SN.TabIndex = 39;
             this.SN.Tag = "fashdufhas";
             this.SN.TextChanged += new System.EventHandler(this.SN_TextChanged);
@@ -92,42 +92,41 @@
             this.date.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date.Location = new System.Drawing.Point(119, 117);
+            this.date.Location = new System.Drawing.Point(134, 146);
             this.date.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(300, 28);
+            this.date.Size = new System.Drawing.Size(337, 32);
             this.date.TabIndex = 37;
             // 
             // Qty
             // 
             this.Qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qty.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Qty.Location = new System.Drawing.Point(119, 161);
-            this.Qty.Margin = new System.Windows.Forms.Padding(4);
+            this.Qty.Location = new System.Drawing.Point(134, 201);
+            this.Qty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Qty.MaxLength = 32;
             this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
-            this.Qty.Size = new System.Drawing.Size(300, 24);
+            this.Qty.Size = new System.Drawing.Size(337, 28);
             this.Qty.TabIndex = 38;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 164);
+            this.label7.Location = new System.Drawing.Point(50, 205);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 18);
+            this.label7.Size = new System.Drawing.Size(77, 22);
             this.label7.TabIndex = 42;
             this.label7.Text = "Quantity";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(310, 356);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(349, 445);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 31);
+            this.button2.Size = new System.Drawing.Size(135, 39);
             this.button2.TabIndex = 41;
             this.button2.Text = "Return";
             this.button2.UseVisualStyleBackColor = true;
@@ -136,10 +135,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(92, 356);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(104, 445);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 31);
+            this.button1.Size = new System.Drawing.Size(135, 39);
             this.button1.TabIndex = 40;
             this.button1.Text = "Save(&s)";
             this.button1.UseVisualStyleBackColor = true;
@@ -148,21 +147,21 @@
             // itemTitile
             // 
             this.itemTitile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemTitile.Location = new System.Drawing.Point(118, 39);
-            this.itemTitile.Margin = new System.Windows.Forms.Padding(4);
+            this.itemTitile.Location = new System.Drawing.Point(133, 49);
+            this.itemTitile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.itemTitile.MaxLength = 128;
             this.itemTitile.Name = "itemTitile";
-            this.itemTitile.Size = new System.Drawing.Size(300, 24);
+            this.itemTitile.Size = new System.Drawing.Size(337, 28);
             this.itemTitile.TabIndex = 35;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(67, 125);
+            this.label8.Location = new System.Drawing.Point(75, 156);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 18);
+            this.label8.Size = new System.Drawing.Size(48, 22);
             this.label8.TabIndex = 40;
             this.label8.Text = "Date";
             // 
@@ -170,18 +169,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 43);
+            this.label1.Location = new System.Drawing.Point(44, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
+            this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 39;
             this.label1.Text = "Item Title";
             // 
             // OutboundModify
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 453);
+            this.ClientSize = new System.Drawing.Size(542, 566);
             this.Controls.Add(this.TrackingNumLabel);
             this.Controls.Add(this.TrackingNum);
             this.Controls.Add(this.label5);
@@ -194,6 +193,7 @@
             this.Controls.Add(this.itemTitile);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OutboundModify";
             this.Text = "OutboundModify";
             this.Load += new System.EventHandler(this.OutboundModify_Load);

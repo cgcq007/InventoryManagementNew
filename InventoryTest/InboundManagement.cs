@@ -483,7 +483,7 @@ namespace InventoryTest
             {
                 try
                 {
-                    var ib = ctx.ItemInbounds.Select(x => new
+                    var ib = ctx.ItemInbounds.Where(available => available.isDelete == false).Select(x => new
                     {
                         x.TrackingNum,
                         x.ItemTitle,

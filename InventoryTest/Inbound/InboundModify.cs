@@ -34,6 +34,7 @@ namespace InventoryTest
                     date.Text = itemInbound.Date.ToString();
                     Qty.Text = itemInbound.Qty.ToString();
                     UPC.Text = itemInbound.UPC;
+                    tbShipperID.Text = itemInbound.ShipperId;
                 }
             }
             catch (Exception ex)
@@ -55,6 +56,7 @@ namespace InventoryTest
                         itemInbound.Date = Convert.ToDateTime(date.Text);
                         itemInbound.Qty = Convert.ToInt32(Qty.Text);
                         itemInbound.UPC = UPC.Text;
+                        itemInbound.ShipperId = tbShipperID.Text;
                         itemInbound.TrackingNum = TrackingNumLabel.Text;
                         ctx.Entry(itemInbound).State = System.Data.Entity.EntityState.Modified;
                         ctx.SaveChanges();

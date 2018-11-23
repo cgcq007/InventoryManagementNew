@@ -28,8 +28,8 @@ namespace InventoryTest
         public DateTime Date { get; set; }
 
         public Boolean isDelete { get; set; }
-        
-        
+
+        public String ShipperId { get; set; }
     }
 
 }

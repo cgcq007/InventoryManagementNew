@@ -293,6 +293,8 @@ namespace InventoryTest {
             
             private global::System.Data.DataColumn columnDate;
             
+            private global::System.Data.DataColumn columnShipperId;
+            
             private global::System.Data.DataColumn columnisDelete;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -386,6 +388,14 @@ namespace InventoryTest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShipperIdColumn {
+                get {
+                    return this.columnShipperId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn isDeleteColumn {
                 get {
                     return this.columnisDelete;
@@ -429,7 +439,7 @@ namespace InventoryTest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ItemInboundsRow AddItemInboundsRow(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, bool isDelete) {
+            public ItemInboundsRow AddItemInboundsRow(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, string ShipperId, bool isDelete) {
                 ItemInboundsRow rowItemInboundsRow = ((ItemInboundsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -439,6 +449,7 @@ namespace InventoryTest {
                         Manipulator,
                         Qty,
                         Date,
+                        ShipperId,
                         isDelete};
                 rowItemInboundsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowItemInboundsRow);
@@ -476,6 +487,7 @@ namespace InventoryTest {
                 this.columnManipulator = base.Columns["Manipulator"];
                 this.columnQty = base.Columns["Qty"];
                 this.columnDate = base.Columns["Date"];
+                this.columnShipperId = base.Columns["ShipperId"];
                 this.columnisDelete = base.Columns["isDelete"];
             }
             
@@ -496,6 +508,8 @@ namespace InventoryTest {
                 base.Columns.Add(this.columnQty);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
+                this.columnShipperId = new global::System.Data.DataColumn("ShipperId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShipperId);
                 this.columnisDelete = new global::System.Data.DataColumn("isDelete", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnisDelete);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -512,6 +526,7 @@ namespace InventoryTest {
                 this.columnManipulator.MaxLength = 2147483647;
                 this.columnQty.AllowDBNull = false;
                 this.columnDate.AllowDBNull = false;
+                this.columnShipperId.MaxLength = 2147483647;
                 this.columnisDelete.AllowDBNull = false;
             }
             
@@ -752,6 +767,22 @@ namespace InventoryTest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShipperId {
+                get {
+                    try {
+                        return ((string)(this[this.tableItemInbounds.ShipperIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShipperId\' in table \'ItemInbounds\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableItemInbounds.ShipperIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool isDelete {
                 get {
                     return ((bool)(this[this.tableItemInbounds.isDeleteColumn]));
@@ -807,6 +838,18 @@ namespace InventoryTest {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetManipulatorNull() {
                 this[this.tableItemInbounds.ManipulatorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShipperIdNull() {
+                return this.IsNull(this.tableItemInbounds.ShipperIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShipperIdNull() {
+                this[this.tableItemInbounds.ShipperIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -976,6 +1019,7 @@ namespace InventoryTest.itemInboudsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Manipulator", "Manipulator");
             tableMapping.ColumnMappings.Add("Qty", "Qty");
             tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("ShipperId", "ShipperId");
             tableMapping.ColumnMappings.Add("isDelete", "isDelete");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -992,8 +1036,8 @@ namespace InventoryTest.itemInboudsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isDelete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDelete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ItemInbounds] ([ItemTitle], [UPC], [TrackingNum], [Manipulator], [Qty], [Date], [isDelete]) VALUES (@ItemTitle, @UPC, @TrackingNum, @Manipulator, @Qty, @Date, @isDelete);
-SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDelete FROM ItemInbounds WHERE (ItemInboundId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ItemInbounds] ([ItemTitle], [UPC], [TrackingNum], [Manipulator], [Qty], [Date], [ShipperId], [isDelete]) VALUES (@ItemTitle, @UPC, @TrackingNum, @Manipulator, @Qty, @Date, @ShipperId, @isDelete);
+SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, ShipperId, isDelete FROM ItemInbounds WHERE (ItemInboundId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UPC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UPC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1001,11 +1045,12 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Manipulator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manipulator", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipperId", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipperId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDelete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDelete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ItemInbounds] SET [ItemTitle] = @ItemTitle, [UPC] = @UPC, [TrackingNum] = @TrackingNum, [Manipulator] = @Manipulator, [Qty] = @Qty, [Date] = @Date, [isDelete] = @isDelete WHERE (([ItemInboundId] = @Original_ItemInboundId) AND ((@IsNull_ItemTitle = 1 AND [ItemTitle] IS NULL) OR ([ItemTitle] = @Original_ItemTitle)) AND ((@IsNull_TrackingNum = 1 AND [TrackingNum] IS NULL) OR ([TrackingNum] = @Original_TrackingNum)) AND ([Qty] = @Original_Qty) AND ([Date] = @Original_Date) AND ([isDelete] = @Original_isDelete));
-SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDelete FROM ItemInbounds WHERE (ItemInboundId = @ItemInboundId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ItemInbounds] SET [ItemTitle] = @ItemTitle, [UPC] = @UPC, [TrackingNum] = @TrackingNum, [Manipulator] = @Manipulator, [Qty] = @Qty, [Date] = @Date, [ShipperId] = @ShipperId, [isDelete] = @isDelete WHERE (([ItemInboundId] = @Original_ItemInboundId) AND ((@IsNull_ItemTitle = 1 AND [ItemTitle] IS NULL) OR ([ItemTitle] = @Original_ItemTitle)) AND ((@IsNull_TrackingNum = 1 AND [TrackingNum] IS NULL) OR ([TrackingNum] = @Original_TrackingNum)) AND ([Qty] = @Original_Qty) AND ([Date] = @Original_Date) AND ([isDelete] = @Original_isDelete));
+SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, ShipperId, isDelete FROM ItemInbounds WHERE (ItemInboundId = @ItemInboundId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UPC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UPC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1013,6 +1058,7 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Manipulator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manipulator", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipperId", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipperId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDelete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isDelete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemInboundId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemInboundId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemTitle", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemTitle", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1038,8 +1084,8 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDele" +
-                "te FROM dbo.ItemInbounds\r\nWHERE  (isDelete = \'TRUE\')";
+            this._commandCollection[0].CommandText = "SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, Shippe" +
+                "rId, isDelete FROM dbo.ItemInbounds\r\nWHERE  (isDelete = \'TRUE\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1141,7 +1187,7 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, bool isDelete) {
+        public virtual int Insert(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, string ShipperId, bool isDelete) {
             if ((ItemTitle == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1168,7 +1214,13 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Qty));
             this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Date));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(isDelete));
+            if ((ShipperId == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ShipperId));
+            }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(isDelete));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1189,7 +1241,7 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, bool isDelete, int Original_ItemInboundId, string Original_ItemTitle, string Original_TrackingNum, int Original_Qty, System.DateTime Original_Date, bool Original_isDelete, int ItemInboundId) {
+        public virtual int Update(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, string ShipperId, bool isDelete, int Original_ItemInboundId, string Original_ItemTitle, string Original_TrackingNum, int Original_Qty, System.DateTime Original_Date, bool Original_isDelete, int ItemInboundId) {
             if ((ItemTitle == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1216,28 +1268,34 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Qty));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Date));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(isDelete));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ItemInboundId));
-            if ((Original_ItemTitle == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((ShipperId == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ItemTitle));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ShipperId));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(isDelete));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ItemInboundId));
+            if ((Original_ItemTitle == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_ItemTitle));
             }
             if ((Original_TrackingNum == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_TrackingNum));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_TrackingNum));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Qty));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_isDelete));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(ItemInboundId));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Qty));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_isDelete));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ItemInboundId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1258,8 +1316,8 @@ SELECT ItemInboundId, ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDel
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, bool isDelete, int Original_ItemInboundId, string Original_ItemTitle, string Original_TrackingNum, int Original_Qty, System.DateTime Original_Date, bool Original_isDelete) {
-            return this.Update(ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, isDelete, Original_ItemInboundId, Original_ItemTitle, Original_TrackingNum, Original_Qty, Original_Date, Original_isDelete, Original_ItemInboundId);
+        public virtual int Update(string ItemTitle, string UPC, string TrackingNum, string Manipulator, int Qty, System.DateTime Date, string ShipperId, bool isDelete, int Original_ItemInboundId, string Original_ItemTitle, string Original_TrackingNum, int Original_Qty, System.DateTime Original_Date, bool Original_isDelete) {
+            return this.Update(ItemTitle, UPC, TrackingNum, Manipulator, Qty, Date, ShipperId, isDelete, Original_ItemInboundId, Original_ItemTitle, Original_TrackingNum, Original_Qty, Original_Date, Original_isDelete, Original_ItemInboundId);
         }
     }
     

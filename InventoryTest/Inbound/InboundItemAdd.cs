@@ -35,7 +35,7 @@ namespace InventoryTest
                 {
                     using (var ctx = new ItemContext())
                     {
-                        ItemInbound II = new ItemInbound() { ItemTitle = itemTitile.Text.Trim(), TrackingNum = TrackingNum.Text.Trim(), Date = Convert.ToDateTime(date.Text.ToString()), Qty = Convert.ToInt32(Qty.Text), Manipulator = manipulator, UPC = UPC.Text.Trim(), isDelete = false };
+                        ItemInbound II = new ItemInbound() { ItemTitle = itemTitile.Text.Trim(), TrackingNum = TrackingNum.Text.Trim(), Date = Convert.ToDateTime(date.Text.ToString()), Qty = Convert.ToInt32(Qty.Text), Manipulator = manipulator, UPC = UPC.Text.Trim(), isDelete = false, ShipperId = tbShipperID.Text.Trim() };
                         ctx.ItemInbounds.Add(II);
                         ctx.SaveChanges();
                     }

@@ -191,6 +191,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "ItemInboundId";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
             // 
             // dataGridViewTextBoxColumn7
             // 

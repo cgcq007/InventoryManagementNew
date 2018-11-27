@@ -57,7 +57,7 @@ namespace InventoryTest
                         itemInbound.Qty = Convert.ToInt32(Qty.Text);
                         itemInbound.UPC = UPC.Text;
                         itemInbound.ShipperId = tbShipperID.Text;
-                        itemInbound.TrackingNum = TrackingNumLabel.Text;
+                        itemInbound.TrackingNum = TrackingNum.Text;
                         ctx.Entry(itemInbound).State = System.Data.Entity.EntityState.Modified;
                         ctx.SaveChanges();
                         MessageBox.Show("Successfully updated!");

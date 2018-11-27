@@ -169,6 +169,7 @@ namespace InventoryTest
             this.dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dataGridView1.Columns["ItemTitle"].FillWeight = 150;
             this.dataGridView1.Columns["ItemInboundId"].FillWeight = 30;
+            this.dataGridView1.Columns["ItemInboundId"].Visible = false;
             this.dataGridView1.Columns["Date"].FillWeight = 50;
             this.dataGridView1.Columns["TrackingNum"].FillWeight = 100;
             this.dataGridView1.Columns["Selected"].FillWeight = 30;

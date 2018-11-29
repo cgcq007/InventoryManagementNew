@@ -111,8 +111,9 @@ namespace InventoryTest
                         x.Listed, x.ReturnCode,x.OutTrackingNumber,x.ItemOutOperator })
                         .Where(a => a.DateOfOut.CompareTo(time1) < 0).ToList();
                     DataTable dt = ToDataSet(ib);
-                    ExcelTool et = new ExcelTool(dt, file);
-                    MessageBox.Show(et.writeToExcel());
+                    ExcelTool et = new ExcelTool();
+                    if (!et.initSavePath()) return;
+                    else MessageBox.Show(et.writeToExcel(dt));
 
                 }
                 catch (Exception ex)

@@ -87,20 +87,20 @@ namespace InventoryTest
             //path.Filter = "Excel Document(*.xls)|*.xls";
             //path.Multiselect = false;
 
-            FolderBrowserDialog path = new FolderBrowserDialog();
-            path.Description = "Pleas Choose a Path:";
-            string file;
+            //FolderBrowserDialog path = new FolderBrowserDialog();
+            //path.Description = "Pleas Choose a Path:";
+            //string file;
             DateTime time1 = Convert.ToDateTime(dateTimePicker1.Text);
 
-            if (path.ShowDialog() == DialogResult.OK)
-            {
-                //file = path.SafeFileName;
-                file = path.SelectedPath;
-            }
-            else
-            {
-                return;
-            }
+            //if (path.ShowDialog() == DialogResult.OK)
+            //{
+            //    //file = path.SafeFileName;
+            //    file = path.SelectedPath;
+            //}
+            //else
+            //{
+            //    return;
+            //}
 
             using (ItemContext ctx = new ItemContext())
             {
